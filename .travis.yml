@@ -1,0 +1,19 @@
+language: python
+python:
+- 3.6
+
+script:
+- echo "Be excellent to each other!"
+- python TestMemoryMap.py
+
+# Aight, this is definitively how you do these encrypted keys: `sudo apt install ruby ruby-dev libz-dev`,
+# `gem install travis`, make sure you're in a folder with a .travis.yml, `travis encrypt thekey123456abcde`, and put
+# the result under the thing it's supposed to represent. No VARIABLE=key, no worrying about capitalization or other
+# command line flags, no putting the raw key in here lest github sniff it out and delete your token.
+deploy:
+  provider: pages
+  github_token:
+    secure: kfUPdIQAuFvTrjqICAk9AqI1NsmhbglfePokzk7yXQf6EFyu5DXw3kh6rB9zNDEWAWAxSlJ6oYFoQbDr6sSJKfqvUzsiZpcdyh6ZF6Y61O1A5OC4Dl8dHUB22SXXPsLAgauX5Wb6u9nnScmkx9c58MiPtZFpb+nCdHgwgs56aqKgEledzdLmbD/bLsCsJa2gROQOWwPCeCLfmx60vBEFq+HjiW6Ia86mGT+45YjW4e5PPxrpoCaT4X5uLHZGXJ7d2OJMnxoUbFasCptIBFT14ZJTkUHHTANyFlQyCbBJDFRutbfYKb3G/LfYVzhxXq7OBGV185mgSSMS51TkbYuuR5GjS3cWwdaByLRzCFDNGcrHKa2Y35G+S7kUyfbarfHFE5zvF+bmAWbv9WbIgVWqxGBaamviXCpAJb1cGgFQHrbwAZ4WJs+uxwe5Jqiu4SqbCp4GAG8wfUO+wTv3Fpz42LahRw0HPEKBkruQp/WUHhDMWvhL7a3V0glkL8+IxtGFIBWiGn2oMkes/CHRWg8Y+Yg5zSudaD4Xlf6WsmtjT7p2en0/MXlJXteuANb1/o9J5FZPqAeJrMzlpODfyBY+QIp9ayVU6z97z9KDidz3vKLHWjOXvQ91yhL2khK+I27EHxiwe4kEM+Y2pVTo0zEGeAXsb+vdSvExjahkgqkNkY8=
+  skip_cleanup: true
+  on:
+branch: master
