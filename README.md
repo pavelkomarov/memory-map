@@ -1,4 +1,4 @@
-[![Build Status](http://img.shields.io/travis/pavelkomarov/memory-map.svg?style=flat)](https://travis-ci.org/pavelkomarov/memory-map)
+[![Build Status](http://img.shields.io/travis/pavel-aicradle/memory-map.svg?style=flat)](https://travis-ci.org/pavel-aicradle/memory-map)
 
 [Numpy's memmap class](https://docs.scipy.org/doc/numpy/reference/generated/numpy.memmap.html) is fantastic for storing and handling big data parsimoniously and efficiently. [Read this article](https://manybutfinite.com/post/page-cache-the-affair-between-memory-and-files/) to get a better appreciation for what is going on in the background.
 
